@@ -1,0 +1,13 @@
+platform :ios, '6.0'
+inhibit_all_warnings!
+
+pod 'SDWebImage'
+pod 'FrameAccessor'
+pod 'HockeySDK'
+pod 'RemoteConfig'
+pod 'ObjectiveSugar'
+pod 'AFNetworking'
+pod 'GVUserDefaults'
+pod 'SDNetworkActivityIndicator'
+pod 'Lambda-Alert'
+pod 'UIColor-HexString'
