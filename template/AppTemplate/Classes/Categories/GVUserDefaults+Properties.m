@@ -1,9 +1,9 @@
 //
 //  GVUserDefaults+Properties.m
-//  ios-radiocom-universal
+//  AppTemplate
 //
-//  Created by Kevin Renskers on 19-12-12.
-//  Copyright (c) 2012 CBS Local. All rights reserved.
+//  Created by Kevin Renskers on 14-01-14.
+//  Copyright (c) 2014 Gangverk. All rights reserved.
 //
 
 #import "GVUserDefaults+Properties.h"

@@ -18,6 +18,9 @@
 		0AB8C9C718854E9100117769 /* GVUserDefaults+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8C9C618854E9100117769 /* GVUserDefaults+Properties.m */; };
 		0AB8C9CA18854ED600117769 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8C9C918854ED600117769 /* Config.m */; };
 		0AB8C9CD1885541400117769 /* UIViewController+Storyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8C9CC1885541400117769 /* UIViewController+Storyboard.m */; };
+		0AB8C9D218858C8C00117769 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8C9D118858C8C00117769 /* Utils.m */; };
+		0AB8C9D6188590D900117769 /* RotationNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8C9D5188590D900117769 /* RotationNavigationController.m */; };
+		0AB8C9D9188591A900117769 /* LabelWithVerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB8C9D8188591A900117769 /* LabelWithVerticalAlignment.m */; };
 		2061CB103A9C455D881C767F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0531F1C2FA124A1DA5036561 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,13 @@
 		0AB8C9C918854ED600117769 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		0AB8C9CB1885541400117769 /* UIViewController+Storyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Storyboard.h"; sourceTree = "<group>"; };
 		0AB8C9CC1885541400117769 /* UIViewController+Storyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Storyboard.m"; sourceTree = "<group>"; };
+		0AB8C9D018858C8C00117769 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		0AB8C9D118858C8C00117769 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		0AB8C9D318858EAB00117769 /* Globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
+		0AB8C9D4188590D900117769 /* RotationNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationNavigationController.h; sourceTree = "<group>"; };
+		0AB8C9D5188590D900117769 /* RotationNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationNavigationController.m; sourceTree = "<group>"; };
+		0AB8C9D7188591A900117769 /* LabelWithVerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelWithVerticalAlignment.h; sourceTree = "<group>"; };
+		0AB8C9D8188591A900117769 /* LabelWithVerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelWithVerticalAlignment.m; sourceTree = "<group>"; };
 		AA43C0483E5C4DED9057228A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +163,10 @@
 			children = (
 				0AB8C9B118854E2700117769 /* UICollectionViewCell */,
 				0AB8C9B218854E2700117769 /* UITableViewCell */,
+				0AB8C9D4188590D900117769 /* RotationNavigationController.h */,
+				0AB8C9D5188590D900117769 /* RotationNavigationController.m */,
+				0AB8C9D7188591A900117769 /* LabelWithVerticalAlignment.h */,
+				0AB8C9D8188591A900117769 /* LabelWithVerticalAlignment.m */,
 			);
 			path = "UIKit Subclasses";
 			sourceTree = "<group>";
@@ -174,8 +188,11 @@
 		0AB8C9B318854E2700117769 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0AB8C9D318858EAB00117769 /* Globals.h */,
 				0AB8C9C818854ED600117769 /* Config.h */,
 				0AB8C9C918854ED600117769 /* Config.m */,
+				0AB8C9D018858C8C00117769 /* Utils.h */,
+				0AB8C9D118858C8C00117769 /* Utils.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -325,7 +342,10 @@
 			files = (
 				0AB8C9C418854E2700117769 /* main.m in Sources */,
 				0AB8C9CD1885541400117769 /* UIViewController+Storyboard.m in Sources */,
+				0AB8C9D6188590D900117769 /* RotationNavigationController.m in Sources */,
 				0AB8C9CA18854ED600117769 /* Config.m in Sources */,
+				0AB8C9D9188591A900117769 /* LabelWithVerticalAlignment.m in Sources */,
+				0AB8C9D218858C8C00117769 /* Utils.m in Sources */,
 				0AB8C9BF18854E2700117769 /* AppDelegate.m in Sources */,
 				0AB8C9C718854E9100117769 /* GVUserDefaults+Properties.m in Sources */,
 			);

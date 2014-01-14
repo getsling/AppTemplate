@@ -1,8 +1,8 @@
 //
 //  UIViewController+Storyboard.h
-//  MenuExample
+//  AppTemplate
 //
-//  Created by Kevin Renskers on 13-12-12.
+//  Created by Kevin Renskers on 14-01-14.
 //  Copyright (c) 2014 Gangverk. All rights reserved.
 //
 

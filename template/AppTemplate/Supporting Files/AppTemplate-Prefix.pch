@@ -20,24 +20,29 @@
     #import <SDWebImage/UIImageView+WebCache.h>
     #import "GVUserDefaults+Properties.h"
     #import "UIViewController+Storyboard.h"
+    #import "Globals.h"
 #endif
 
+// DLog is a better NSLog
 #if defined (CONFIGURATION_Release)
 #define DLog( s, ... )
 #else
 #define DLog( s, ... ) NSLog( @"<%@:%d> %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #endif
 
+// Handy shortcuts
 #define ApplicationDelegate                 ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 #define UserDefaults                        [GVUserDefaults standardUserDefaults]
 #define NotificationCenter                  [NSNotificationCenter defaultCenter]
 #define SharedApplication                   [UIApplication sharedApplication]
-#define Bundle                              [NSBundle mainBundle]
+#define MainBundle                          [NSBundle mainBundle]
 #define MainScreen                          [UIScreen mainScreen]
 #define ShowNetworkActivityIndicator()      [[SDNetworkActivityIndicator sharedActivityIndicator] startActivity]
 #define HideNetworkActivityIndicator()      [[SDNetworkActivityIndicator sharedActivityIndicator] stopActivity]
 #define IsPhone                             ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+#define IsPortrait                          UIInterfaceOrientationIsPortrait(SharedApplication.statusBarOrientation)
 
+// iOS version information
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
 #define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)

@@ -1,9 +1,9 @@
 //
 //  Config.m
-//  lastfmlocalplayback
+//  AppTemplate
 //
-//  Created by Piers Biddlestone on 15/11/12.
-//  Copyright (c) 2012 Last.fm. All rights reserved.
+//  Created by Kevin Renskers on 14-01-14.
+//  Copyright (c) 2014 Gangverk. All rights reserved.
 //
 
 #import "Config.h"
