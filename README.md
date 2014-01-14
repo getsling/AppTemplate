@@ -15,6 +15,9 @@ cd AppTemplate
 ./clone.py
 ```
 
+Run `pod install` in your newly created project folder and from then on only open the workspace.
+
+You should also edit the Makefile in your new project and enter the correct Hockey API key.
 
 ## Who are we?
 Gangverk is a software consultancy founded by seasoned software professionals. We have been creating applications, both desktop and web-based for over a decade. Of late we have been focusing on mobile applications, specifically media applications for mobile users. We pride ourselves in our ability to offer our clients assistance throughout the creative process from conception to design to implementation, operation and maintenance.
