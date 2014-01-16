@@ -2,8 +2,8 @@
 //  Utils.h
 //  AppTemplate
 //
-//  Created by Kevin Renskers on 14-01-14.
-//  Copyright (c) 2014 Gangverk. All rights reserved.
+//  Created by {PERSON} on 14-01-14.
+//  Copyright (c) {COPYRIGHT}. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
