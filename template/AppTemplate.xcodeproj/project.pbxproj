@@ -513,7 +513,6 @@
 				GCC_PREFIX_HEADER = "AppTemplate/Supporting Files/AppTemplate-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"DEBUG=1",
 					"CONFIGURATION_$(CONFIGURATION)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/AppTemplate/Supporting Files/AppTemplate-Info.plist";
