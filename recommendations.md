@@ -182,7 +182,7 @@ The only problem is the syntax, it's verbose and not very friendly, especially w
 This last test will actually fail, since `NSUInteger` 2 isn't equal to `int` 2. Quite annoying.
 
 ### [Expecta](https://github.com/specta/expecta)
-By using Expecta we can turn that test into something more readable:
+By using Expecta we can turn those tests into something more readable:
 
 ```objective-c
 - (void)testName {
