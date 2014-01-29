@@ -181,8 +181,8 @@ The only problem is the syntax, it's verbose and not very friendly, especially w
 
 This last test will actually fail, since `NSUInteger` 2 isn't equal to `int` 2. Quite annoying.
 
-### Expecta
-By using [expecta](https://github.com/specta/expecta) we can turn that test into something more readable:
+### [Expecta](https://github.com/specta/expecta)
+By using Expecta we can turn that test into something more readable:
 
 ```objective-c
 - (void)testName {
@@ -198,8 +198,8 @@ By using [expecta](https://github.com/specta/expecta) we can turn that test into
 
 It's not a huge change, the code won't be any shorter, but it's easier to read from left to right. It also has useable default error messages, and last but not least: type checking simply works like you would expect.
 
-### Specta
-By also adopting [specta](https://github.com/specta/specta) a much bigger change can be had:
+### [Specta](https://github.com/specta/specta)
+By also adopting Specta a much bigger change can be had:
 
 ```objective-c
 SpecBegin(Person)
