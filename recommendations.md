@@ -24,7 +24,7 @@ Functional reactive programming in Objective-C. A single, unified approach to de
 
 Use it to replace state in your code, react to events (like user input or network connections), combine inputs and bind to output.
 
-```
+```objective-c
 [[RACSignal 
     merge:@[ [client fetchUserRepos], [client fetchOrgRepos] ]] 
     subscribeCompleted:^{
@@ -35,7 +35,7 @@ Use it to replace state in your code, react to events (like user input or networ
 ### [AFNetworking 2](https://github.com/AFNetworking/AFNetworking)
 "Networking made easy."
 
-```
+```objective-c
 AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 NSDictionary *parameters = @{@"foo": @"bar"};
 [manager POST:@"http://example.com/resources.json" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -50,7 +50,7 @@ iOS 7-only apps could also look into using vanilla `NSURLSession` but AFNetworki
 ### [ObjectiveSugar](https://github.com/mneorr/ObjectiveSugar)
 Very handy shortcuts, especially for dealing with arrays and dictionaries.
 
-```
+```objective-c
 [@1 upto:4 do:^(NSInteger numbah) {
   NSLog(@"Current number.. %d", numbah);
 }];
@@ -77,7 +77,7 @@ Xcode 5 finally integrates nicely with XCTest, their own unit testing framework.
 
 The only problem is the syntax, it's verbose and not very friendly, especially when it comes to type checking.
 
-```
+```objective-c
 #import <XCTest/XCTest.h>
 #import "Person.h"
 
@@ -115,7 +115,7 @@ This last test will actually fail, since `NSUInteger` 2 isn't equal to `int` 2. 
 ### Expecta
 By using [expecta](https://github.com/specta/expecta) we can turn that test into something more readable:
 
-```
+```objective-c
 - (void)testName {
     self.person.name = @"Joe";
     expect(self.person.name).to.equal(@"Joe");
@@ -132,7 +132,7 @@ It's not a huge change, the code won't be any shorter, but it's easier to read f
 ### Specta
 By also adopting [specta](https://github.com/specta/specta) a much bigger change can be had:
 
-```
+```objective-c
 SpecBegin(Person)
 
 describe(@"person", ^{
