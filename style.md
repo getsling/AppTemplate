@@ -1,9 +1,7 @@
 # Gangverk iOS code style
 We should all use the same code style in our projects, it makes it easier to jump into someone else's code and keeps everything clean and easy to read.
 
-We use Apple's existing [Coding Guidelines for Cocoa](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html).
-
-Just to highlight how our code should look:
+We use Apple's existing [Coding Guidelines for Cocoa](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html). Sadly their code snippets and file templates don't always follow the same code style, so to highlight how our code should look:
 
 ```objective-c
 - (NSString *)doStufWithPerson:(Person *)person {
@@ -48,6 +46,7 @@ Just to highlight how our code should look:
     }
 
     // Yes, it's silly code. It's only here to show good spacing.
+    // Also note how the comment begins with a space.
     NSString *name = [person.name isEqualToString:@"Joe"] ? @"Joe" : nil;
     NSString *nameWithDefault = name ?: @"Unknown";
 
@@ -55,7 +54,7 @@ Just to highlight how our code should look:
 }
 ```
 
-The spaces, use of newlines and placement of braces are how our code should look. Another example:
+Note the placement of spaces and braces, and the use of newlines to separate the code logic and make it more readable. Another example:
 
 ```objective-c
 @class Person;
