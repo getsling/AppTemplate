@@ -69,6 +69,75 @@ Core Data is pretty cool, except it has so much boilerplate. NLCoreData solves t
 
 [NLCoreData-ObjectiveRecord](https://github.com/kevinrenskers/NLCoreData-ObjectiveRecord) adds a nicer syntax on top of NLCoreData.
 
+### [SDWebImage](https://github.com/rs/SDWebImage)
+Asynchronous image downloader with an UIImageView category, caches to disk.
+
+```objective-c
+[self.imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+```
+
+Even though AFNetworking also has a `setImageWithURL` category, we have found that SDWebImage performs a lot better, especially in table- and collection views with lots and lots of images.
+
+### [RemoteConfig](https://github.com/gangverk/RemoteConfig)
+Most of our clients want to have some control over config values in the app. It's also very useful to be able to change values without having to resubmit to the App Store. Think time out values, API root urls, ad id's, etc.
+
+```objective-c
+- (NSURL *)remoteFileLocation {
+    return [NSURL URLWithString:@"https://raw.github.com/gangverk/RemoteConfig/master/Example/example.json"];
+}
+
+- (void)setupMapping {
+    [self mapRemoteKeyPath:@"remote_integer_value" toLocalAttribute:@"exampleIntegerValue" defaultValue:[NSNumber numberWithInteger:1]];
+    [self mapRemoteKeyPath:@"remote_string_value" toLocalAttribute:@"exampleStringValue" defaultValue:@"Default local value"];
+    [self mapRemoteKeyPath:@"nonexisting_string_value" toLocalAttribute:@"nonExistingStringValue" defaultValue:@"Default local value for nonexisting value on server"];
+}
+```
+
+
+## Smaller categories and helpers
+
+### [FrameAccessor](https://github.com/AlexDenisov/FrameAccessor)
+Much easier access to frame properties, especially when setting them.
+
+```objective-c
+view.x = 15.;
+view.width = 167.;
+```
+
+instead of:
+
+```objective-c
+CGRect newFrame = view.frame;
+newFrame.origin.x = 15.;
+newFrame.size.width = 167.;
+view.frame = newFrame;
+```
+
+### [GVUserDefaults](https://github.com/gangverk/GVUserDefaults)
+NSUserDefaults access via properties.
+
+```objective-c
+[GVUserDefaults standardUserDefaults].userName = @"myusername";
+```
+
+### [Lambda-Alert](https://github.com/zoul/Lambda-Alert)
+Block based UIAlert and UIActionSheet.
+
+```objective-c
+CCAlertView *alert = [[CCAlertView alloc] initWithTitle:@"Test Alert" message:@"See if the thing works."];
+[alert addButtonWithTitle:@"Foo" block:^{ NSLog(@"Foo"); }];
+[alert addButtonWithTitle:@"Bar" block:^{ NSLog(@"Bar"); }];
+[alert addButtonWithTitle:@"Cancel" block:NULL];
+[alert show];
+```
+
+### [UIColor-HexString](https://github.com/kevinrenskers/UIColor-HexString)
+Hex colors for UIColor.
+
+```objective-c
+[UIColor colorWithHexString:@"#2D9EDF"]
+```
+
 
 ## Unit Testing
 Let's just do this. We all know the benefits, so if we focus on making unit testing as easy as possible there's nothing to stand in our way.
