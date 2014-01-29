@@ -197,36 +197,3 @@ By using Expecta we can turn those tests into something more readable:
 ```
 
 It's not a huge change, the code won't be any shorter, but it's easier to read from left to right. It also has useable default error messages, and last but not least: type checking simply works like you would expect.
-
-### [Specta](https://github.com/specta/specta)
-By also adopting Specta a much bigger change can be had:
-
-```objective-c
-SpecBegin(Person)
-
-describe(@"person", ^{
-    __block Person *person;
-
-    beforeEach(^{
-        person = [[Person alloc] init];
-    });
-
-    it(@"name should be set", ^{
-        person.name = @"Joe";
-        expect(person.name).to.equal(@"Joe");
-    });
-
-    it(@"count should be 2", ^{
-        NSArray *items = @[ @1, @2 ];
-        expect([items count]).to.equal(2);
-    });
-
-    afterEach(^{
-        person = nil;
-    });
-});
-
-SpecEnd
-```
-
-A very big change in syntax. To be honest I'm not sure if this is better.
