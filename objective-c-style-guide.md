@@ -92,6 +92,7 @@ The Ternary operator, ? , should only be used when it increases clarity or code 
 **For example:**
 ```objc
 result = a > b ? x : y;
+result = a ?: b;
 ```
 
 **Not:**
