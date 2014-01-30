@@ -361,3 +361,35 @@ Singleton objects should use a thread-safe pattern for creating their shared ins
 ```
 
 This will prevent [possible and sometimes prolific crashes](http://cocoasamurai.blogspot.com/2011/04/singletons-your-doing-them-wrong.html).
+
+## Pragma directives
+Use the #pragma preprocessor directive to organise your code into logical sections. Not only does this make code easier to read but it also adds visual cues to the Xcode source navigator. When grouping protocol methods use the name of the protocol for the #pragma directive so Xcode can provide a link the protocol's declaration.
+
+```objc
+@implementation ViewController
+
+#pragma mark - Initialisation
+
+- (id)init {
+}
+
+#pragma mark - View lifecycle
+
+- (void)viewDidLoad {
+}
+
+- (void)viewWillAppear {
+}
+
+#pragma mark - UITableViewDataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+}
+
+#pragma mark - IBActions
+
+- (IBAction)acceptButtonTouched:(id)sender {
+}
+
+@end
+```
