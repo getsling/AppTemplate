@@ -5,7 +5,7 @@ Gangverk universal iOS app template.
 ## What is this?
 This is Gangverk's app template to create a new (universal) iOS app. It uses our preferred folder structure, default pods and handy macros. It includes a command line build script for creating a new build and uploading it to Hockey.
 
-For a list of recommended frameworks and libraries have a look at [recommendations.md](https://github.com/gangverk/MenuSkeleton/recommendations.md), and our code style is documented in [objective-c-style-guide.md](https://github.com/gangverk/AppTemplate/blob/master/objective-c-style-guide.md).
+For a list of recommended frameworks and libraries have a look at [recommendations.md](https://github.com/gangverk/AppTemplate/blob/master/recommendations.md), and our code style is documented in [objective-c-style-guide.md](https://github.com/gangverk/AppTemplate/blob/master/objective-c-style-guide.md).
 
 
 ## Create a new project from the template

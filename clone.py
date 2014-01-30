@@ -35,9 +35,10 @@ findReplace(destination, '{PERSON}', person_name)
 findReplace(destination, '{CREATED}', datetime.now().strftime("%d-%m-%Y"))
 findReplace(destination, '{COPYRIGHT}', '{0} {1}'.format(datetime.now().year, company_name))
 
-# Rename the info plist and prefix header
+# Rename the info plist, prefix header and shared shemes
 os.rename('{0}/AppTemplate/Supporting Files/AppTemplate-Info.plist'.format(destination), '{0}/AppTemplate/Supporting Files/{1}-Info.plist'.format(destination, project_name))
 os.rename('{0}/AppTemplate/Supporting Files/AppTemplate-Prefix.pch'.format(destination), '{0}/AppTemplate/Supporting Files/{1}-Prefix.pch'.format(destination, project_name))
+os.rename('{0}/AppTemplate.xcodeproj/xcshareddata/xcschemes/AppTemplate.xcscheme'.format(destination), '{0}/AppTemplate.xcodeproj/xcshareddata/xcschemes/{1}.xcscheme'.format(destination, project_name))
 
 # Rename the xcodeproj folder and source folder
 os.rename('{0}/AppTemplate.xcodeproj'.format(destination), '{0}/{1}.xcodeproj'.format(destination, project_name))

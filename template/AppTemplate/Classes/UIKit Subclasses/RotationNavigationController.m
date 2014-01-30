@@ -23,4 +23,8 @@
     return [self.topViewController supportedInterfaceOrientations];
 }
 
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return [self.topViewController preferredInterfaceOrientationForPresentation];
+}
+
 @end
