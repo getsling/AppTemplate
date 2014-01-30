@@ -11,3 +11,7 @@ pod 'GVUserDefaults'
 pod 'SDNetworkActivityIndicator'
 pod 'Lambda-Alert'
 pod 'UIColor-HexString'
+
+target :Tests, :exclusive => true do
+  pod 'Expecta'
+end

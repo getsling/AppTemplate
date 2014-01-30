@@ -23,7 +23,6 @@ Here are some of the documents from Apple that informed the style guide. If some
 * [Variables](#variables)
 * [Naming](#naming)
 * [Comments](#comments)
-* [Init & Dealloc](#init-and-dealloc)
 * [Literals](#literals)
 * [Constants](#constants)
 * [Enumerated Types](#enumerated-types)
@@ -31,6 +30,7 @@ Here are some of the documents from Apple that informed the style guide. If some
 * [Image Naming](#image-naming)
 * [Booleans](#booleans)
 * [Singletons](#singletons)
+* [Pragma directives](#pragma-directives)
 
 ## Dot-Notation Syntax
 Dot-notation should **always** be used for accessing and mutating properties. Bracket notation is preferred in all other instances.
@@ -206,22 +206,6 @@ When they are needed, comments should be used to explain **why** a particular pi
 
 Block comments should generally be avoided, as code should be as self-documenting as possible, with only the need for intermittent, few-line explanations. This does not apply to those comments used to generate documentation.
 
-## init and dealloc
-`dealloc` methods should be placed at the top of the implementation, directly after the `@synthesize` and `@dynamic` statements. `init` should be placed directly below the `dealloc` methods of any class.
-
-`init` methods should be structured like this:
-
-```objc
-- (instancetype)init {
-    self = [super init]; // or call the designated initializer
-    if (self) {
-        // Custom initialization
-    }
-
-    return self;
-}
-```
-
 ## Literals
 `NSString`, `NSDictionary`, `NSArray`, and `NSNumber` literals should be used whenever creating immutable instances of those objects. Pay special care that `nil` values not be passed into `NSArray` and `NSDictionary` literals, as this will cause a crash.
 
@@ -363,22 +347,43 @@ Singleton objects should use a thread-safe pattern for creating their shared ins
 This will prevent [possible and sometimes prolific crashes](http://cocoasamurai.blogspot.com/2011/04/singletons-your-doing-them-wrong.html).
 
 ## Pragma directives
-Use the #pragma preprocessor directive to organise your code into logical sections. Not only does this make code easier to read but it also adds visual cues to the Xcode source navigator. When grouping protocol methods use the name of the protocol for the #pragma directive so Xcode can provide a link the protocol's declaration.
+Use the `#pragma` preprocessor directive to organise your code into logical sections. Not only does this make code easier to read but it also adds visual cues to the Xcode source navigator. When grouping protocol methods use the name of the protocol for the `#pragma` directive so Xcode can provide a link the protocol's declaration.
 
 ```objc
 @implementation ViewController
 
-#pragma mark - Initialisation
+#pragma mark - Setters and getters
 
-- (id)init {
+- (void)setUser:(User *)user {
 }
 
 #pragma mark - View lifecycle
 
+- (instancetype)init {
+    self = [super init]; // or call the designated initializer
+    if (self) {
+        // Custom initialization
+    }
+
+    return self;
+}
+
 - (void)viewDidLoad {
+    [super viewDidLoad];
+    // Your code here
 }
 
 - (void)viewWillAppear {
+    [super viewWillAppear];
+    // Your code here
+}
+
+- (void)viewDidDisappear {
+    // Your code here
+    [super viewWillAppear];
+}
+
+- (void)dealloc {
 }
 
 #pragma mark - UITableViewDataSource
