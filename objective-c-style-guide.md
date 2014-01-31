@@ -62,7 +62,27 @@ if (user.isHappy) {
 ```
 
 * There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but often there should probably be new methods.
-* `@synthesize` and `@dynamic` should each be declared on new lines in the implementation.
+* `@synthesize` and `@dynamic` should each be declared on new lines in the implementation (if you even need `@synthesize`).
+* There should be exactly two blank lines after the block of `#import`s.
+* There should be exactly two blank lines after a `@protocol`.
+
+**For example:**
+```objc
+#import <UIKit/UIKit.h>
+
+
+@protocol MenuDelegate <NSObject>
+- (void)doSomeStuffWithMenu;
+@end
+
+
+@interface MenuViewController : UITableViewController
+
+@property (strong, nonatomic) MyObject *myObject;
+@property (strong, nonatomic) MyOtherObject *myOtherObject;
+
+@end
+```
 
 ## Conditionals
 Conditional bodies should always use braces even when a conditional body could be written without braces (e.g., it is one line only) to prevent [errors](https://github.com/NYTimes/objective-c-style-guide/issues/26#issuecomment-22074256). These errors include adding a second line and expecting it to be part of the if-statement. Another, [even more dangerous defect](http://programmers.stackexchange.com/a/16530) may happen where the line "inside" the if-statement is commented out, and the next line unwittingly becomes part of the if-statement. In addition, this style is more consistent with all other conditionals, and therefore more easily scannable.
