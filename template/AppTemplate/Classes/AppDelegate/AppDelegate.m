@@ -92,7 +92,8 @@
 
 - (void)setupURLCaching {
     // Enable URL caching
-    NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:4*1024*1024 diskCapacity:32*1024*1024 diskPath:nil];
+    NSUInteger meg = 1024 * 1024;
+    NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:(4 * meg) diskCapacity:(32 * meg) diskPath:nil];
     [NSURLCache setSharedURLCache:cache];
 }
 
