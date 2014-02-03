@@ -64,7 +64,9 @@ if (user.isHappy) {
 * There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but often there should probably be new methods.
 * `@synthesize` and `@dynamic` should each be declared on new lines in the implementation (if you even need `@synthesize`).
 * There should be exactly two blank lines after the block of `#import`s.
-* There should be exactly two blank lines after a `@protocol`.
+* There should be exactly two blank lines before `@protocol`, `@interface` and `@implementation`.
+* There should be one blank line after `@protocol`, `@interface` and `@implementation`.
+* There should be one blank line before `@end`.
 
 **For example:**
 ```objc
@@ -72,7 +74,9 @@ if (user.isHappy) {
 
 
 @protocol MenuDelegate <NSObject>
+
 - (void)doSomeStuffWithMenu;
+
 @end
 
 
@@ -287,7 +291,9 @@ Private properties should be declared in class extensions (anonymous categories)
 
 ```objc
 @interface LastFm ()
+
 @property (nonatomic, strong) NSOperationQueue *queue;
+
 @end
 ```
 

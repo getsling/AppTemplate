@@ -12,6 +12,7 @@
 
 
 @interface AppDelegate () <BITHockeyManagerDelegate>
+
 @end
 
 

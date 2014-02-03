@@ -335,6 +335,8 @@
 				0AB8C96B18854D2900117769 /* Frameworks */,
 				0AB8C96C18854D2900117769 /* Resources */,
 				5A167A55BEE1432C8A0D4BD9 /* Copy Pods Resources */,
+				0A8C6C56189FD6F200831EA8 /* ShellScript */,
+				0A8C6C57189FD70600831EA8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -413,6 +415,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "MODELS_DIR=\"${PROJECT_DIR}/AppTemplate/Resources\"\nDATA_MODEL_PACKAGE=\"$MODELS_DIR/AppTemplate.xcdatamodeld\"\nCURRENT_VERSION=`/usr/libexec/PlistBuddy \"$DATA_MODEL_PACKAGE/.xccurrentversion\" -c 'print _XCCurrentVersionName'`\nOUTPUT_DIR=\"${PROJECT_DIR}/AppTemplate/Classes/Models\"\n/usr/local/bin/mogenerator --model \"$DATA_MODEL_PACKAGE/$CURRENT_VERSION\" --human-dir \"$OUTPUT_DIR/\" --machine-dir \"$OUTPUT_DIR/Machine/\" --template-var arc=true\n";
+		};
+		0A8C6C56189FD6F200831EA8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -z ${SKIP_OBJCLEAN} || ${SKIP_OBJCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Objective-Clean.app\" ]]; then\n\"${LOCAL_APPS_DIR}\"/Objective-Clean.app/Contents/Resources/ObjClean.app/Contents/MacOS/ObjClean \"${SRCROOT}\"\nelse\necho \"warning: You have to install and set up Objective-Clean to use its features!\"\nfi\nfi";
+		};
+		0A8C6C57189FD70600831EA8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nfind \"${SRCROOT}/AppTemplate\" \\( -name \"*.h\" -or -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"";
 		};
 		1A2A7FD019A44BCDBD316AFB /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -755,6 +783,7 @@
 				0A229A7E189A7445006904CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0A229A94189A74CC006904CA /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
@@ -764,6 +793,7 @@
 				0A229A97189A74CC006904CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AB8C96918854D2900117769 /* Build configuration list for PBXProject "AppTemplate" */ = {
 			isa = XCConfigurationList;
