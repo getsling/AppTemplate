@@ -273,17 +273,9 @@
 			isa = PBXGroup;
 			children = (
 				0AB8C9B618854E2700117769 /* Images.xcassets */,
-				0AB8C9B718854E2700117769 /* Nibs */,
 				0AB8C9B818854E2700117769 /* Storyboards */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		0AB8C9B718854E2700117769 /* Nibs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Nibs;
 			sourceTree = "<group>";
 		};
 		0AB8C9B818854E2700117769 /* Storyboards */ = {
